@@ -1,0 +1,15 @@
+/* CSS declarations go here */
+
+.list-loader {
+    padding-top: 4%;
+    padding-left: 40%;
+}
+
+h1 {
+    text-align: center;
+    color: #a72c2c;
+}
+
+.on-drop {
+    cursor: no-drop;
+}
