@@ -18,8 +18,8 @@ Meteor.methods({
     }
     return Products.insert({
       name: product.name,
-      quantity: product.quantity,
-      price: product.price,
+      quantity: ((product.quantity)/1).toFixed(0),
+      price: ((product.price)/1).toFixed(2),
       createdAt: new Date(),
     });
   },

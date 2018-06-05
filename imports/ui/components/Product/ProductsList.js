@@ -36,9 +36,9 @@ class ProductsList extends PureComponent {
     this.props.allProducts.map((product) => (
       <tr key={product._id}>
         <td>{product.name}</td>
-        <td>{product.quantity}</td>
-        <td>{product.price}</td>
-        <td>{product.price * product.quantity}</td>
+        <td>{((product.quantity) / 1).toFixed(0)}</td>
+        <td>{((product.price) / 1).toFixed(2)}</td>
+        <td>{(product.price * product.quantity).toFixed(2)}</td>
         <td><span className="glyphicon glyphicon-remove on-drop" onClick={() => this.removeProduct(product._id)}
                   aria-hidden="true"/></td>
       </tr>
@@ -75,8 +75,12 @@ class ProductsList extends PureComponent {
       </React.Fragment>
     );
   }
-}
+};
 
+ProductsList.propTypes = {
+  listLoading: PropTypes.bool.isRequired,
+  allProducts: PropTypes.array.isRequired
+};
 
 export default withTracker(() => {
   const handle = Meteor.subscribe('products');
