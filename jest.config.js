@@ -1,4 +1,10 @@
 module.exports = {
+  "collectCoverage": true,
+  "coverageDirectory": "/home/rajkumara/projects/meteor/products/tests/reports/coverage",
+  "coverageReporters": [
+    "cobertura",
+    "html"
+  ],
   transform: {
     '^.+\\.js?$': 'babel-jest',
   },
