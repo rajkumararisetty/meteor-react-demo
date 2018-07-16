@@ -46,3 +46,6 @@ Production Build Steps:
 
 - Deployed Mongo DB in mLab
 - Hosted production build in heroku
+
+Demo:
+https://react-meteor.herokuapp.com/
